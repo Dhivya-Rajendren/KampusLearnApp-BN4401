@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<p class="alert alert-primary"> 
+
+    Course Details
+</p>
+
+<table class="table table-bordered w-50">
+    <tr>
+        <th>
+            Course Name
+        </th>
+        <th>Technology</th>
+        <th>Cost</th>
+        <th>Duration </th>
+    </tr>
+
+    @foreach(var item in ViewBag.Courses)
+    {
+        <tr>
+            <td>
+                <a asp-action="GetCourse" asp-route-courseId=@item.CourseId asp-controller="Course">
+
+                       @item.CourseName
+                </a>
+                
+             </td>
+            <td>@item.Technology</td>
+            <td>@item.Price</td>
+            <td>@item.DurationInHours</td>
+        </tr>
+    }
+</table>

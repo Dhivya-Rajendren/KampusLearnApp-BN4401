@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="card w-25">
+    <div class="card-header">
+        @ViewBag.Course.CourseName
+    </div>
+    <div class="card-body">
+     <p>@ViewBag.Course.Technology</p>   
+      <p>  @ViewBag.Course.DurationInHours</p>
+    </div>
+
+    <div class="card-footer">
+        <a asp-action="Index" asp-controller="Course">Back to List</a>
+    </div>
+</div>
